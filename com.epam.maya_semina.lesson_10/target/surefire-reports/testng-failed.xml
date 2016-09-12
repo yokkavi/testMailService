@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="com.epam.maya_semina.exceptions.TestNgRunException"/>
+      <class name="com.epam.maya_semina.runner.TestCaseListener"/>
+      <class name="com.epam.maya_semina.test.BaseTest"/>
+      <class name="com.epam.maya_semina.test.MailboxTest"/>
+    </classes>
+  </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.epam.maya_semina.test.BaseTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="close"/>
+          <include name="navigateToMailPageTest"/>
+          <include name="exitTest"/>
+        </methods>
+      </class> <!-- com.epam.maya_semina.test.BaseTest -->
+      <class name="com.epam.maya_semina.test.MailboxTest">
+        <methods>
+          <include name="veryfySentLetterTest"/>
+          <include name="sendDraftTest"/>
+          <include name="navigateToMailPageTest"/>
+          <include name="exitTest"/>
+          <include name="writeLetterTest"/>
+        </methods>
+      </class> <!-- com.epam.maya_semina.test.MailboxTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

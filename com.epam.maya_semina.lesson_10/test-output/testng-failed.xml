@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="url" value="http://письмо.рф"/>
+  <listeners>
+    <listener class-name="com.epam.maya_semina.utils.ScreenShotListener"/>
+  </listeners>
+  <test verbose="2" name="Default test">
+    <parameter name="url" value="http://письмо.рф"/>
+    <classes>
+      <class name="com.epam.maya_semina.test.MailboxTestPatterns"/>
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <parameter name="url" value="http://письмо.рф"/>
+    <classes>
+      <class name="com.epam.maya_semina.test.MailboxTestPatterns">
+        <methods>
+          <include name="veryfySentLetterTest"/>
+          <include name="mailBoxTestSetUp"/>
+          <include name="clear"/>
+          <include name="setUp"/>
+          <include name="writeLetterTest"/>
+          <include name="close"/>
+          <include name="sendDraftTest"/>
+          <include name="exitTest"/>
+        </methods>
+      </class> <!-- com.epam.maya_semina.test.MailboxTestPatterns -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
