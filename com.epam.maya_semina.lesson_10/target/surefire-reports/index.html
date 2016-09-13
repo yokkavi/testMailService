@@ -2,7 +2,6 @@
 
 <html>
   <head>
-  <meta charset='utf-8'>
   <title>TestNG reports</title>
 
     <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
@@ -54,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-Command_line_suite">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -172,12 +171,12 @@
                   <a name="navigateToMailPageTest">
                   </a> <!-- navigateToMailPageTest -->
                   <span class="method-name">navigateToMailPageTest</span>
-                  <div class="stack-trace">org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+                  <div class="stack-trace"><b>"org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;EPRURYAW0079&apos;, ip: &apos;10.19.12.141&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_101&apos;
 Driver info: driver.version: RemoteWebDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.3.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 2a57dd42-13e9-46b9-a218-1f62088b0865
+Session ID: 5a8a4394-3429-4548-97df-ae66dae5a2e6
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
@@ -188,6 +187,15 @@ Session ID: 2a57dd42-13e9-46b9-a218-1f62088b0865
 	at com.sun.proxy.$Proxy10.getSize(Unknown Source)
 	at com.epam.maya_semina.mailService.MailboxFunctions.isPresent(MailboxFunctions.java:81)
 	at com.epam.maya_semina.test.BaseTest.navigateToMailPageTest(BaseTest.java:78)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
 	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
@@ -218,7 +226,87 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
 	... 58 more
-... Removed 34 stack frames
+... Removed 25 stack frames<br/> org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
+System info: host: &apos;EPRURYAW0079&apos;, ip: &apos;10.19.12.141&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.3.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 5a8a4394-3429-4548-97df-ae66dae5a2e6
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.getSize(Unknown Source)
+	at com.epam.maya_semina.mailService.MailboxFunctions.isPresent(MailboxFunctions.java:81)
+	at com.epam.maya_semina.test.BaseTest.navigateToMailPageTest(BaseTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:353)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:380)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:184)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:88)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:71)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.fallBackExecute(ApacheHttpClient.java:162)
+	at org.openqa.selenium.remote.internal.ApacheHttpClient.execute(ApacheHttpClient.java:90)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:142)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.execute(NewProfileExtensionConnection.java:160)
+	at org.openqa.selenium.firefox.FirefoxDriver$LazyCommandExecutor.execute(FirefoxDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:644)
+	... 43 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:74)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:134)
+	... 58 more
+"</b><br>org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)<br>org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)<br>org.openqa.selenium.By$ByXPath.findElement(By.java:361)<br>org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br>org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)<br>org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br>com.sun.proxy.$Proxy10.getSize(Unknown Source)<br>com.epam.maya_semina.mailService.MailboxFunctions.isPresent(MailboxFunctions.java:81)<br>com.epam.maya_semina.test.BaseTest.navigateToMailPageTest(BaseTest.java:78)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)<br>org.testng.internal.Invoker.invokeMethod(Invoker.java:714)<br>org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)<br>org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)<br>org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)<br>org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br>org.testng.TestRunner.privateRun(TestRunner.java:767)<br>org.testng.TestRunner.run(TestRunner.java:617)<br>org.testng.SuiteRunner.runTest(SuiteRunner.java:334)<br>org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)<br>org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)<br>org.testng.SuiteRunner.run(SuiteRunner.java:240)<br>org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br>org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br>org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)<br>org.testng.TestNG.runSuitesLocally(TestNG.java:1123)<br>org.testng.TestNG.run(TestNG.java:1031)<br>org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:77)<br>org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:159)<br>org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)<br>org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:106)<br>sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br>sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)<br>sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)<br>java.lang.reflect.Method.invoke(Unknown Source)<br>org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)<br>org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)<br>org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)<br>org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)<br>org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)<br>
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -242,9 +330,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
                   <a name="sendDraftTest">
                   </a> <!-- sendDraftTest -->
                   <span class="method-name">sendDraftTest</span>
-                  <div class="stack-trace">java.lang.Throwable: Method MailboxTest.sendDraftTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.epam.maya_semina.test.MailboxTest@62ee68d8] depends on not successfully finished methods in group &quot;write_a_letter&quot;
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -284,9 +369,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
                   <a name="writeLetterTest">
                   </a> <!-- writeLetterTest -->
                   <span class="method-name">writeLetterTest</span>
-                  <div class="stack-trace">java.lang.Throwable: Method MailboxTest.writeLetterTest(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.epam.maya_semina.test.MailboxTest@62ee68d8] depends on not successfully finished methods in group &quot;authorization&quot;
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -308,27 +390,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
       &lt;class name=&quot;com.epam.maya_semina.test.MailboxTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
-  &lt;test name=&quot;Command line test(failed)&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.epam.maya_semina.test.BaseTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;setUp&quot;/&gt;
-          &lt;include name=&quot;close&quot;/&gt;
-          &lt;include name=&quot;navigateToMailPageTest&quot;/&gt;
-          &lt;include name=&quot;exitTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.epam.maya_semina.test.BaseTest --&gt;
-      &lt;class name=&quot;com.epam.maya_semina.test.MailboxTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;veryfySentLetterTest&quot;/&gt;
-          &lt;include name=&quot;sendDraftTest&quot;/&gt;
-          &lt;include name=&quot;navigateToMailPageTest&quot;/&gt;
-          &lt;include name=&quot;exitTest&quot;/&gt;
-          &lt;include name=&quot;writeLetterTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.epam.maya_semina.test.MailboxTest --&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Command line test(failed) --&gt;
 &lt;/suite&gt; &lt;!-- Command line suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -341,9 +402,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
             <ul>
               <li>
                 <span class="test-name">Command line test (4 classes)</span>
-              </li>
-              <li>
-                <span class="test-name">Command line test(failed) (2 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -405,13 +463,13 @@ data.addRows(8);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'navigateToMailPageTest')
 data.setCell(0, 2, 'com.epam.maya_semina.test.BaseTest')
-data.setCell(0, 3, 10703);
+data.setCell(0, 3, 5490);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'veryfySentLetterTest')
 data.setCell(1, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'sendDraftTest')
+data.setCell(2, 1, 'veryfySentLetterTest')
 data.setCell(2, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
@@ -419,26 +477,26 @@ data.setCell(3, 1, 'veryfySentLetterTest')
 data.setCell(3, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'veryfySentLetterTest')
+data.setCell(4, 1, 'navigateToMailPageTest')
 data.setCell(4, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'navigateToMailPageTest')
+data.setCell(5, 1, 'veryfySentLetterTest')
 data.setCell(5, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'veryfySentLetterTest')
+data.setCell(6, 1, 'writeLetterTest')
 data.setCell(6, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'writeLetterTest')
+data.setCell(7, 1, 'sendDraftTest')
 data.setCell(7, 2, 'com.epam.maya_semina.test.MailboxTest')
 data.setCell(7, 3, 0);
 window.suiteTableData['Command_line_suite']= { tableData: data, tableDiv: 'times-div-Command_line_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 5 seconds</span>
               <div id="times-div-Command_line_suite">
               </div> <!-- times-div-Command_line_suite -->
             </div> <!-- times-div -->
@@ -463,7 +521,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.epam.maya_semina.test.MailboxTest</span>
+              <span class="ignored-class-name">com.epam.maya_semina.test.BaseTest</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">close</span>
                 <br/>
@@ -479,58 +537,55 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.epam.maya_semina.test.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUp(http://–ü–∏—Å—å–º–æ.—Ä—Ñ)</span>
+                <span class="method-name">setUp(http://œËÒ¸ÏÓ.Ù)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">navigateToMailPageTest</span>
-                <span class="method-start">4487 ms</span>
+                <span class="method-start">4614 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">exitTest</span>
-                <span class="method-start">15205 ms</span>
+                <span class="method-start">10120 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.epam.maya_semina.test.MailboxTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">navigateToMailPageTest</span>
-                <span class="method-start">16233 ms</span>
+                <span class="method-start">11140 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">veryfySentLetterTest(yokkavi@gmail.com, test_letter_0, Hello!)</span>
-                <span class="method-start">16243 ms</span>
+                <span class="method-start">11149 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">veryfySentLetterTest(mistl@ya.ru, test_letter_1, Hi!)</span>
-                <span class="method-start">16243 ms</span>
+                <span class="method-start">11149 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">veryfySentLetterTest(mistl@ya.ru, test_letter_2, blablabla!)</span>
-                <span class="method-start">16244 ms</span>
+                <span class="method-start">11150 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">veryfySentLetterTest(vfdsaa@ya.ru, test_letter_3, blablabla!)</span>
-                <span class="method-start">16244 ms</span>
+                <span class="method-start">11150 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">exitTest</span>
-                <span class="method-start">16245 ms</span>
+                <span class="method-start">11151 ms</span>
               </div> <!-- configuration-class after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.epam.maya_semina.test.BaseTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">close</span>
-                <span class="method-start">16291 ms</span>
+                <span class="method-start">11192 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -22,6 +22,7 @@
           <include name="setUp"/>
           <include name="writeLetterTest"/>
           <include name="close"/>
+          <include name="navigateToMailPageTest"/>
           <include name="sendDraftTest"/>
           <include name="exitTest"/>
         </methods>
