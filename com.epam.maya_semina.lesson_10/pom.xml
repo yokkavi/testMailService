@@ -75,9 +75,6 @@
 				<version>2.19.1</version>
 				<configuration>
 					<skip>true</skip>
-					<suiteXmlFiles>
-						<suiteXmlFile>testng-customsuite.xml</suiteXmlFile>
-					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -92,6 +89,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
 				</configuration>
