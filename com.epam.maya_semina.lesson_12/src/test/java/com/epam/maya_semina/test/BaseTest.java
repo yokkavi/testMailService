@@ -24,21 +24,17 @@ import com.epam.maya_semina.utils.ScreenShot;
 
 public class BaseTest {
 
-	private static final String FINISH_CLEAR = "finish: 'clear'";
-	private static final String START_CLEAR = "start: 'clear'";
-	
 	private static final String FINISH_SET_UP = "finish: setUp";
 	private static final String START_SET_UP = "start: setUp";
 	private static final int TIMEOUT = 900;
 	private static final String FALSE = "false";
-	
-	
+
 	private WebDriver driver;
 	private static final Logger LOG = Logger.getLogger(BaseTest.class);
 	private String url;
-	
+
 	private MainPage inboxEmailPage;
-	
+
 	private static final String INCORRECT_TITLE = "Incorrect title: ";
 
 	static {
@@ -51,35 +47,16 @@ public class BaseTest {
 	public void setUp(@Optional("http://Письмо.рф") String url) throws IOException {
 		LOG.warn(START_SET_UP);
 		this.url = url;
-//		 driver = Driver.getWebDriverInstances("Chrome", DriverTypes.CHROME);
+		// driver = Driver.getWebDriverInstances("Chrome", DriverTypes.CHROME);
 		driver = DriverSingletone.getWebDriverInstance();
 		LOG.warn(FINISH_SET_UP);
-	}
-
-	
-
-	@AfterGroups("authorization")
-	public void clear() throws InterruptedException {
-		LOG.info(START_CLEAR);
-		Thread.sleep(TIMEOUT);
-		inboxEmailPage.clickChoiseAllButton().clickDeleteButton().clickDraftsLink();
-		Thread.sleep(TIMEOUT);
-		inboxEmailPage = new MainPage(driver);
-		inboxEmailPage.clickChoiseAllButton().clickDeleteButton().clickMainPageLink();
-		Thread.sleep(TIMEOUT);
-		inboxEmailPage.clickSentMessagesLink();
-		inboxEmailPage = new MainPage(driver);
-		Thread.sleep(TIMEOUT);
-		inboxEmailPage.clickChoiseAllButton();
-		inboxEmailPage.clickDeleteButton();
-		inboxEmailPage.clickRcmlInboxLink();
-		LOG.info(FINISH_CLEAR);
 	}
 
 	// 4 Выход из системы с помощью нажатия «выход»/«Выйти» На странице
 	// появилось поле для ввода логина или пароля.
 
-	@AfterClass (alwaysRun = true)//(dependsOnGroups = "verify_sent_letter", alwaysRun = true)
+	@AfterClass(alwaysRun = true) // (dependsOnGroups = "verify_sent_letter",
+									// alwaysRun = true)
 	public void exitTest() throws InterruptedException {
 		LOG.info("start: 'exitTest'");
 		inboxEmailPage.clickMainPageLink();
@@ -93,7 +70,7 @@ public class BaseTest {
 		LOG.info("finish: 'exitTest'");
 	}
 
-	@AfterSuite (alwaysRun = true)
+	@AfterSuite(alwaysRun = true)
 	public void close() {
 		LOG.warn("start: close");
 		driver.close();

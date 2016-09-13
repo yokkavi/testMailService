@@ -37,6 +37,8 @@ public class MailboxTest extends BaseTest {
 	private static final String START_WRITE_LETTER_TEST = "start: 'writeLetterTest'";
 	private static final String FINISH_NAVIGATE_TO_MAIL_PAGE_TEST = "finish: 'navigateToMailPageTest'";
 	private static final String START_NAVIGATE_TO_MAIL_PAGE_TEST = "start: 'navigateToMailPageTest'";
+	private static final String FINISH_CLEAR = "finish: 'clear'";
+	private static final String START_CLEAR = "start: 'clear'";
 	
 	private static final String LETTER_IS_NOT_SAVED = "Letter is not saved";
 	private static final String UNCORRECTED_LETTER = "Uncorrected letter";
@@ -80,6 +82,24 @@ public class MailboxTest extends BaseTest {
 		}
 		super.getLogger().info(FINISH_NAVIGATE_TO_MAIL_PAGE_TEST);
 		Assert.assertTrue(isThatPage, ELEMENT_BUTTON_CREATE_NEW_LETTER_IS_NOT_PRESENT);
+	}
+	
+	@AfterGroups("authorization")
+	public void clear() throws InterruptedException {
+		super.getLogger().info(START_CLEAR);
+		Thread.sleep(TIMEOUT);
+		inboxEmailPage.clickChoiseAllButton().clickDeleteButton().clickDraftsLink();
+		Thread.sleep(TIMEOUT);
+		inboxEmailPage = new MainPage(driver);
+		inboxEmailPage.clickChoiseAllButton().clickDeleteButton().clickMainPageLink();
+		Thread.sleep(TIMEOUT);
+		inboxEmailPage.clickSentMessagesLink();
+		inboxEmailPage = new MainPage(driver);
+		Thread.sleep(TIMEOUT);
+		inboxEmailPage.clickChoiseAllButton();
+		inboxEmailPage.clickDeleteButton();
+		inboxEmailPage.clickRcmlInboxLink();
+		super.getLogger().info(FINISH_CLEAR);
 	}
 
 	@Test(groups = "write_a_letter", dependsOnGroups = "authorization", dataProvider = "getData", dataProviderClass = LetterDataProvider.class)
