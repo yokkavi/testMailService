@@ -75,7 +75,7 @@ public class BaseTest {
 		if (isThatPage) {
 			new MailboxFunctions(driver).performAuthorization(mailboxAuthorizationPage, user);
 			inboxEmailPage = new MainPage(driver);
-			isThatPage = new MailboxFunctions(driver).isPresent(inboxEmailPage.getButtonCreateNewLetter());
+			isThatPage = new MailboxFunctions(driver).equalsAuthorisatiomPageTitle(driver.getTitle());
 		}
 		LOG.info(FINISH_NAVIGATE_TO_MAIL_PAGE_TEST);
 		Assert.assertTrue(isThatPage, ELEMENT_BUTTON_CREATE_NEW_LETTER_IS_NOT_PRESENT);
