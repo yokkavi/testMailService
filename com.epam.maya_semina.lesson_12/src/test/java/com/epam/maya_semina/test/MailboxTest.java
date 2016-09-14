@@ -56,8 +56,6 @@ public class MailboxTest extends BaseTest {
 	private WebDriver driver;
 	private Letter letter;
 
-	// 1 Авторизоваться в системе пользователем Отображается на экране почта
-	// пользователя
 
 	@BeforeClass
 	public void mailBoxTestSetUp() {

@@ -2,12 +2,12 @@ package com.epam.maya_semina.mail.builder;
 
 public class UserBuilder extends BaseBuilder {
 
-	private static final String ÒÅÑÒ_ÌÀÈË_ÁÎÊÑ_ÏÈÑÜÌÎ_ĞÔ = "òåñò_ìàèë_áîêñ@Ïèñüìî.ĞÔ";
+	private static final String Ğ¢Ğ•Ğ¡Ğ¢_ĞœĞĞ˜Ğ›_Ğ‘ĞĞšĞ¡_ĞŸĞ˜Ğ¡Ğ¬ĞœĞ_Ğ Ğ¤ = "Ñ‚ĞµÑÑ‚_Ğ¼Ğ°Ğ¸Ğ»_Ğ±Ğ¾ĞºÑ@ĞŸĞ¸ÑÑŒĞ¼Ğ¾.Ğ Ğ¤";
 	private static final String _1627993445 = "1627993445";
 
 	@Override
 	public void buildLogin() {
-		persona.setUserLogin(ÒÅÑÒ_ÌÀÈË_ÁÎÊÑ_ÏÈÑÜÌÎ_ĞÔ);
+		persona.setUserLogin(Ğ¢Ğ•Ğ¡Ğ¢_ĞœĞĞ˜Ğ›_Ğ‘ĞĞšĞ¡_ĞŸĞ˜Ğ¡Ğ¬ĞœĞ_Ğ Ğ¤);
 	}
 
 	@Override
