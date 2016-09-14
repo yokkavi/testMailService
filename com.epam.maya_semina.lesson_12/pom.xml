@@ -4,9 +4,6 @@
 	<groupId>com.epam.maya_semina.lesson_12</groupId>
 	<artifactId>com.epam.maya_semina.lesson_12</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<properties>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
